@@ -1,0 +1,11 @@
+Flask
+pdfplumber
+SpeechRecognition
+pyaudio
+pytesseract
+Pillow
+PyMuPDF
+langdetect
+googletrans==4.0.0rc1
+pyzbar
+opencv-python 

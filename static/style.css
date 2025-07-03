@@ -1,0 +1,124 @@
+body {
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.container {
+    max-width: 1100px;
+}
+
+h1 {
+    font-weight: 700;
+    color: #2c3e50;
+    letter-spacing: 1px;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+    color: #007bff;
+    font-weight: 600;
+}
+
+.card {
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+    border: 1px solid #e3e6ea;
+    transition: box-shadow 0.2s;
+}
+.card:hover {
+    box-shadow: 0 4px 16px rgba(44,62,80,0.13);
+}
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #34495e;
+    margin-bottom: 0.5em;
+}
+.btn-primary, .btn-success, .btn-outline-danger, .btn-outline-success {
+    border-radius: 6px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+    transition: box-shadow 0.2s, background 0.2s;
+}
+.btn-primary {
+    background: linear-gradient(90deg, #6a82fb 60%, #fc5c7d 100%);
+    border: none;
+    color: #fff;
+}
+.btn-success {
+    background: linear-gradient(90deg, #43e97b 60%, #38f9d7 100%);
+    border: none;
+    color: #fff;
+}
+.btn-primary:focus, .btn-success:focus {
+    box-shadow: 0 0 0 0.2rem rgba(106,130,251,.25);
+}
+.btn-primary:hover, .btn-success:hover {
+    filter: brightness(0.95);
+    box-shadow: 0 4px 16px rgba(44,62,80,0.18);
+}
+
+pre {
+    background: #f4f4f4;
+    border-radius: 6px;
+    padding: 1em;
+    font-size: 0.97em;
+    color: #222;
+}
+
+.table {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.table th {
+    background: #e9ecef;
+    color: #495057;
+    font-weight: 600;
+}
+.table td, .table th {
+    vertical-align: middle;
+}
+
+#voiceBtn {
+    margin-bottom: 1em;
+    font-size: 1.1em;
+    padding: 0.5em 1.5em;
+    background: linear-gradient(90deg, #f7971e 60%, #ffd200 100%);
+    color: #222;
+    border: none;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+}
+#voiceBtn:hover {
+    filter: brightness(0.97);
+    box-shadow: 0 4px 16px rgba(44,62,80,0.18);
+}
+
+#voiceStatus {
+    font-size: 1em;
+    color: #555;
+    min-height: 2em;
+}
+
+@media (max-width: 900px) {
+    .container {
+        max-width: 98vw;
+    }
+    .card-title {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        margin-bottom: 1.5em;
+    }
+    .pdf-card-img {
+        max-height: 120px;
+    }
+    h1 {
+        font-size: 1.3em;
+    }
+} 
