@@ -61,5 +61,3 @@ Create a `.env` file in the `backend/` directory:
 - `AWS_ACCESS_KEY_ID`: Optional for S3 backup.
 - `AWS_SECRET_ACCESS_KEY`: Optional for S3 backup.
 
----
-*Developed for the JTP Innovation Evaluation Round. 2026.*
