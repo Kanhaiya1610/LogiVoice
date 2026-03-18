@@ -1,0 +1,27 @@
+# Node
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Python
+backend/__pycache__/
+backend/venv/
+backend/.venv/
+backend/.env
+backend/doc_classifier.pkl
+backend/history.json
+backend/uploads/*
+!backend/uploads/.gitkeep
+backend/static/pdf_pages/*
+!backend/static/pdf_pages/.gitkeep
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

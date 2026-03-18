@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+
+# Environment Variables
+.env
+
+# Project specific
+uploads/
+static/pdf_pages/
+doc_classifier.pkl
+history.json
+
+# If you want to keep the folders but hide contents
+!uploads/.gitkeep
+!static/pdf_pages/.gitkeep

@@ -1,41 +1,65 @@
-# LogiVoice: Smart Logistics Doc & Voice Assistant
+# LogiVoice 2.0 🚀
+### AI-Powered Smart Logistics Assistant
 
-LogiVoice is a modern web app that streamlines logistics document handling with AI-powered PDF extraction, voice commands, translation, barcode/QR detection, and annotation. It features a beautiful dashboard, bulk PDF processing, history tracking, and mobile-friendly design.
-
-## Features
-- Upload and preview multiple PDFs with auto document type detection (Invoice, Delivery Note, etc.)
-- Extract key data (invoice number, customer, products) and detect barcodes/QR codes
-- Translate extracted text to multiple languages
-- Voice command support for searching and actions
-- Annotate PDF previews and save as images
-- Command/data history with CSV export and memory-saving auto-cleanup
-
-## Setup
-1. **Clone the repo:**
-   ```bash
-   git clone <your-repo-url>
-   cd <project-folder>
-   ```
-2. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-   - Install [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) and required language data files
-   - Install [ffmpeg](https://ffmpeg.org/) and add to PATH (for voice feature)
-3. **Run the app:**
-   ```bash
-   python app.py
-   ```
-4. **Open in browser:**
-   Go to [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
-
-## Usage
-- Upload one or more PDFs to see previews, extract data, translate, and annotate.
-- Use the voice command button for smart search and actions.
-- View and export your history, or clear it to free up space.
+LogiVoice 2.0 is a full-stack logistics automation platform built for the **JTP (Japan Third Party)** evaluation. It combines **Computer Vision (OCR)**, **Natural Language Processing (spaCy NER)**, and **Generative AI (Gemini)** to transform "dumb" logistics documents into searchable, chat-capable digital assets.
 
 ---
 
-## 5-line Project Description for CV
+## 🏗 Architecture
+```text
+[ Frontend: React 19 ] <---> [ Backend: Flask API ]
+       |                          |
+       |                          +--> NLP: spaCy (Entity Recognition)
+       |                          +--> ML: Scikit-Learn (Classification)
+       |                          +--> GenAI: Google Gemini (Document Chat)
+       v                          +--> OCR: Tesseract & PDFPlumber
+[ Cloud: AWS S3 ] <-----------+   +--> Audio: FFmpeg & Whisper/Google
+```
 
-Smart web app for logistics document automation: PDF upload, AI-powered data extraction, barcode/QR detection, and translation. Features voice command search, annotation, and bulk processing. Modern dashboard UI with history, export, and mobile support. Built with Python (Flask), JS, Bootstrap, Tesseract, and Google Translate. Designed for real-world logistics, document, and workflow efficiency. 
+---
+
+## ✨ Key Features
+
+- 🧠 **Multi-Stage ML Pipeline**:
+    - **Classification**: Naive Bayes model trained on expanded logistics datasets.
+    - **Extraction**: spaCy NER (`en_core_web_sm`) to detect organizations and locations.
+    - **Generative Chat**: Ask questions directly to your documents via integrated Gemini AI.
+- 🎙️ **Voice Retrieval**: conversational voice commands to find invoices or shipping details.
+- 📄 **Universal Parser**: Supports PDFs, Images (PNG/JPG), and Text files with automatic OCR.
+- 📊 **Intelligence Dashboard**: Real-time analytics with SVG-rendered data visualizations.
+- ☁️ **Enterprise Ready**: Dockerized deployment with optional AWS S3 cloud backup.
+- 🌍 **JTP Optimized**: Built-in support for Japanese document translation and extraction.
+
+---
+
+## 🚀 Quick Start (Docker - Recommended)
+```bash
+docker-compose up --build
+```
+The app will be available at `http://localhost:5173`.
+
+## 🛠 Manual Installation
+
+### Backend
+1. `cd backend`
+2. `python -m venv venv`
+3. `venv\Scripts\activate` (Windows)
+4. `pip install -r requirements.txt`
+5. `python -m spacy download en_core_web_sm`
+6. `python app.py`
+
+### Frontend
+1. `cd frontend`
+2. `npm install`
+3. `npm run dev`
+
+---
+
+## ⚙️ Environment Variables
+Create a `.env` file in the `backend/` directory:
+- `GEMINI_API_KEY`: Your Google AI Studio key (required for Chat feature).
+- `AWS_ACCESS_KEY_ID`: Optional for S3 backup.
+- `AWS_SECRET_ACCESS_KEY`: Optional for S3 backup.
+
+---
+*Developed for the JTP Innovation Evaluation Round. 2026.*

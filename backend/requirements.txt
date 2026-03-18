@@ -1,0 +1,17 @@
+Flask
+Flask-Cors
+pdfplumber
+SpeechRecognition
+pytesseract
+Pillow
+PyMuPDF
+langdetect
+deep-translator
+pyzbar
+opencv-python
+scikit-learn
+boto3
+gunicorn
+spacy
+google-generativeai
+python-dotenv
